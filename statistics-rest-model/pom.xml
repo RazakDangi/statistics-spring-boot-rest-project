@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+   <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.rad.statistics.rest</groupId>
+	<artifactId>statistics-rest-model</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>statistics-rest-model</name>
+	<description></description>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring.boot.version>2.0.5.RELEASE</spring.boot.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+<plugins>
+		<!-- 	<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+	</plugin> -->
+
+	<!-- <plugin>
+        <groupId>org.immutables.tools</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createDependencyReducedPom>true</createDependencyReducedPom>
+              <shadedArtifactAttached>false</shadedArtifactAttached>
+              <minimizeJar>true</minimizeJar>
+              <createSourcesJar>true</createSourcesJar>
+              <artifactSet>
+                <includes>
+                  <include>org.immutables:value</include>
+                  <include>org.immutables:value-annotations</include>
+                  <include>org.immutables:value-processor</include>
+                  <include>org.immutables:generator</include>
+                  <include>com.google.guava:guava</include>
+                </includes>
+              </artifactSet>
+              <relocations>
+                <relocation>
+                  <pattern>com.google.common</pattern>
+                  <shadedPattern>org.immutables.value.internal.$guava$</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.thirdparty</pattern>
+                  <shadedPattern>org.immutables.value.internal.$thirdparty$</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.immutables.value.processor</pattern>
+                  <shadedPattern>org.immutables.value.internal.$processor$</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.immutables.generator</pattern>
+                  <shadedPattern>org.immutables.value.internal.$generator$</shadedPattern>
+                </relocation>
+              </relocations>
+              <filters>
+                <filter>
+                  <artifact>org.immutables:value</artifact>
+                  <includes>
+                    <include>org/immutables/value/*</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>org.immutables:value-annotation</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>org.immutables:value-processor</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                  <excludes>
+                    <exclude>**/*.generator</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>com.google.guava:guava</artifact>
+                  <excludes>
+                    <exclude>META-INF/maven/**</exclude>
+                    <exclude>**/*.java</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+              <transformers>
+                <transformer />
+                <transformer>
+                  <manifestEntries>
+                    <Automatic-Module-Name>${module.name}</Automatic-Module-Name>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+          <execution>
+            <id>annotations</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <minimizeJar>false</minimizeJar>
+              <createSourcesJar>true</createSourcesJar>
+              <shadedClassifierName>annotations</shadedClassifierName>
+              <artifactSet>
+                <excludes>
+                  <exclude>org.immutables:value</exclude>
+                </excludes>
+                <includes>
+                  <include>org.immutables:value-annotations</include>
+                </includes>
+              </artifactSet>
+              <transformers>
+                <transformer>
+                  <manifestEntries>
+                    <Automatic-Module-Name>${module.name}.annotations</Automatic-Module-Name>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>-->
+    </plugins> 
+	</build>
+
+
+</project>
